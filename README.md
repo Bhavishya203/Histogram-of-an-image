@@ -6,41 +6,67 @@ To obtain a histogram for finding the frequency of pixels in an Image with pixel
 Anaconda - Python 3.7
 
 ## Algorithm:
-### Step1:
-<br>
+Step1:
+Import the necessary libraries and read two images, Color image and Gray Scale image.
 
-### Step2:
-<br>
+Step2:
+Calculate the Histogram of Gray scale image and each channel of the color image.
 
-### Step3:
-<br>
+Step3:
+Display the histograms with their respective images.
 
-### Step4:
-<br>
+Step4:
+Equalize the grayscale image.
 
-### Step5:
-<br>
+Step5:
+Display the grayscale image.
 
 ## Program:
 ```python
-# Developed By:
-# Register Number:
+# Developed By:Bhavishya Reddy Mitta
+# Register Number:212221230061
 import cv2
 import matplotlib.pyplot as plt
 
 # Write your code to find the histogram of gray scale image and color image channels.
+gray_image=cv2.imread('grayscale.jpg')
+hist=cv2.calcHist([gray_image],[0],None,[256],[0,256])
+plt.imshow(gray_image)
+plt.show()
+plt.figure()
+plt.title("histogram")
+plt.xlabel('grayscale value')
+plt.ylabel('pixel count')
+plt.stem(hist)
+plt.show()
 
 
 
 
 
 # Display the histogram of gray scale image and any one channel histogram from color image
+color_image=cv2.imread('DIPIMG1.jpg')
+hist=cv2.calcHist([color_image],[0],None,[256],[0,256])
+plt.imshow(color_image)
+plt.show()
+plt.figure()
+plt.title("histogram")
+plt.xlabel('colorscale value')
+plt.ylabel('pixel count')
+plt.stem(hist)
+plt.show()
 
 
 
 
 
 # Write the code to perform histogram equalization of the image. 
+gray_image = cv2.imread('DIP.jpg',0)
+equ=cv2.equalizeHist(gray_image)
+cv2.imshow('Gray image',gray_image)
+cv2.imshow('Equalized Image',equ)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 
@@ -51,10 +77,7 @@ import matplotlib.pyplot as plt
 ```
 ## Output:
 ### Input Grayscale Image and Color Image
-<br>
-<br>
-<br>
-<br>
+
 
 ### Histogram of Grayscale Image and any channel of Color Image
 <br>
