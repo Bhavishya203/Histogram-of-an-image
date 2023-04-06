@@ -90,7 +90,7 @@ cv2.destroyAllWindows()
 
 ### Histogram Equalization of Grayscale Image
 ![output](https://github.com/Bhavishya203/Histogram-of-an-image/blob/main/dip%204b-3.jpg)
-
+![output](https://github.com/Bhavishya203/Histogram-of-an-image/blob/main/dip%204b-4.jpg)
 
 
 
